@@ -1,0 +1,39 @@
+// @import "/base.scss";
+@import "base";
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.gird {
+    width: 1125px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    height: 120px;
+    background-image: $gradient;
+}
+
+.hd-left,
+.hd-right {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: $white-color;
+    margin: 0 5px;
+    font-size: 1.4rem;
+}
+
+header ul li a:hover {
+    color: #e0dbda;
+}

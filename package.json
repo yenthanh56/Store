@@ -1,23 +1,27 @@
 {
-  "name": "store",
-  "version": "1.0.0",
-  "description": "Product",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yenthanh56/Store.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yenthanh56/Store/issues"
-  },
-  "homepage": "https://github.com/yenthanh56/Store#readme",
-  "devDependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.13"
-  }
+    "name": "store",
+    "version": "1.0.0",
+    "description": "Product",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "nodemon --inspect src/app.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "node-sass --watch src/resources/scss/ --output src/public/css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yenthanh56/Store.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yenthanh56/Store/issues"
+    },
+    "homepage": "https://github.com/yenthanh56/Store#readme",
+    "devDependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.4",
+        "node-sass": "^6.0.1",
+        "nodemon": "^2.0.13"
+    }
 }
