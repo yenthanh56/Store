@@ -27,7 +27,7 @@ header {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;
+    margin-top: 8px;
 }
 
 header ul li a {
@@ -48,6 +48,7 @@ header ul li a:hover {
     position: relative;
     flex: 1;
     margin-top: 10px;
+    margin-left: 4px;
 }
 
 .logo {
@@ -91,5 +92,132 @@ header ul li a:hover {
     right: 4px;
     position: absolute;
     background-color: #f84c2f;
-    padding: 6px 25px;
+    padding: 8px 25px;
+}
+
+.icon-search {
+    color: $white-color;
+    font-size: 1.6rem;
+}
+
+// home
+// list
+.list-product {
+    width: 200px;
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    list-style: none;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color;
+    text-decoration: none;
+}
+
+.product p {
+    flex: 1;
+    margin: 0 0 0 8px;
+    padding: 0;
+}
+
+.product .item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 8px;
+    text-decoration: none;
+    color: $text-color;
+}
+
+.brand a:hover,
+.product .item:hover {
+    color: $back-color;
+    background-color: #cccccc3b;
+}
+
+.brand {
+    position: absolute;
+    top: -1px;
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 200px;
+    left: 200px;
+    list-style: none;
+    animation: facein ease-in 0.3s;
+    display: none;
+}
+
+.brand::before {
+    position: absolute;
+    display: block;
+    content: " ";
+    height: 190px;
+    width: 3px;
+    top: 0px;
+    left: -2px;
+}
+
+.product:hover .brand {
+    display: block;
+}
+
+.brand li a {
+    text-decoration: none;
+    color: $text-color;
+    padding: 8px;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+}
+
+.brand-item span {
+    flex: 1;
+}
+
+// phone highlights
+.phone-highlights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color;
+}
+
+.phone-highlights h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.brand-highlights {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-highlights li {
+    // margin: 0 8px;
+}
+
+.brand-highlights li a {
+    text-decoration: none;
+    color: #333333ab;
+    font-size: 1.4rem;
+    padding: 9px;
+    background-color: #cccccc75;
+    margin: 0 2px;
+    border-radius: 8px;
+    transition: ease-out 0.3s;
+}
+
+.brand-highlights li a:hover {
+    color: #3333335e;
 }
