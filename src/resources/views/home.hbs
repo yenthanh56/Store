@@ -424,7 +424,9 @@
     </ul>
 
     <div class="phone-highlights">
-        <h3>Điện thoại nổi bật nhất</h3>
+        <a href="">
+            <h3>ĐIỆN THOẠI NỔI BẬT NHẤT</h3>
+        </a>
         <ul class="brand-highlights">
             <li><a href="">Apple</a></li>
             <li><a href="">SamSung</a></li>
@@ -434,15 +436,51 @@
         </ul>
     </div>
     <div class="mt-4">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row list-apple">
+            {{#each stores}}
+            <div class="col-sm-6 col-lg-2 mt-4">
+                <a href="{{this.slug}}" class="card-outside">
+                    <div class="card card-item">
+                        <img src="{{this.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">{{this.name}}</h3>
+                            <p class="card-text">{{this.price}}</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+            {{/each}}
         </div>
+    </div>
+    <div class="phone-highlights mt-4">
+        <a href="">
+            <h3>LAPTOP</h3>
+        </a>
+        <ul class="brand-highlights">
+            <li><a href="">Apple</a></li>
+            <li><a href="">SamSung</a></li>
+            <li><a href="">Xiaomi</a></li>
+            <li><a href="">OPPO</a></li>
+            <li><a href="">Nokia</a></li>
+        </ul>
+    </div>
+    <div class="mt-4">
+        {{!-- <div class="row list-apple">
+
+            {{#each samsungs}}
+            <div class="col-sm-6 col-lg-2 mt-4">
+                <a href="{{this.slug}}" class="card-outside">
+                    <div class="card card-item">
+                        <img src="{{this.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">{{this.name}}</h3>
+                            <p class="card-text">{{this.price}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+        </div> --}}
     </div>
 
 
