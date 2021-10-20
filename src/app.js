@@ -1,11 +1,11 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3000;
 const exphbs = require('express-handlebars');
 
 const router = require('./routers/index');
-router(app);
+
 
 const db = require('./config/db');
 db.connect();
@@ -22,6 +22,12 @@ app.set('view engine', 'hbs');
 
 // set default view
 app.set('views', path.join(__dirname, 'resources/views'));
+
+// fix req.body 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+router(app);
 
 
 app.listen(port, () => {
